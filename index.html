@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDSON Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="" id="site-logo"> 
+            </div>
+            <ul>
+                <li><a href="#">Bogga Hore</a></li>
+                <li><a href="#nagu saabsan">nagu saabsan</a></li>
+                <li><a href="#adeegyada">Adeegyada</a></li>
+                <li><a href="#contact">Nala Soo Xiriir</a></li>
+            </ul>
+            <a href="#contact" class="btn-nav">Nala Soo Xiriir</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Gacmo aqoon u saaxiib ah iyo <span>adeeg</span> hufan.</h1>
+            <p>Mobile-kaaga annagaa u dabiib ah.</p>
+            <div class="hero-btns">
+                <a href="#adeegyada" class="btn-primary">Adeegyada</a>
+                <a href="#contact" class="btn-secondary">Nala Soo Xiriir</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+    <div class="feature-box">
+        <h3>Adeeg La Isku Halayn Karo</h3>
+        <p>Waxaan kuu haynaa adeeg tayo leh oo lagu kalsoonaan karo.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>Khubaro Loo Kalsoon Yahay</h3>
+        <p>Farsamo yaqaano leh khibrad badan.</p>
+    </div>
+F
+    <div class="feature-box">
+        <h3>Adeeg Hufan oo Amaan Ah</h3>
+        <p>Qalabkaaga si badbaado leh ayaan u hagaajinaa.</p>
+    </div>
+ </section>
+
+ 
+
+
+
+
+ <section id="nagu saabsan" class="services"></section>
+ <div class="midson-hero-section">
+    <div class="midson-container">
+        <div class="midson-images">
+            <div class="image-main">
+                <img src="about1.jpeg" alt="Repairing Electronics"> </div>
+            <div class="image-overlay">
+                <img src="about.jpeg" alt="Circuit Board"> </div>
+        </div>
+
+        <div class="midson-content">
+            <h2 class="midson-title">Ku Soo Dhawow Midson</h2>
+            <p class="midson-description">
+                Waxaan nahay shirkad ku takhasustay hagaajinta taleefanada gacanta iyo kombuyuutarada. 
+                Farsamayaqaannadeena khibrada badan leh ayaa diyaar u ah inay si degdeg ah oo hufan 
+                kuugu hagaajiyaan qalabkaaga. Qiime jaban oo la awoodi karo iyo adeeg hufan oo degdeg ah.
+            </p>
+            <a href="#" class="midson-button">Akhri Faahfaahin →</a>
+        </div>
+    </div>
+</div>
+</section>
+
+    
+
+    <section id="adeegyada" class="services">
+        <h2>Adeegyada</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <img src="repair3.jpg" alt="Repair">
+                <h3>Hagaajinta Taleefanada Gacanta</h3>
+                <p>Waxaan kuu dayactiraynaa noocyada kala duwan ee Mobiles-ka si xirfadeysan.</p>
+                <button id="bt" onclick="scrollToContact()">nala soo Xiriir</button>
+            </div>
+            <div class="service-card">
+                <img src="repair1.jpg" alt="Laptop">
+                <h3>Hagaajinta Kumbuyuutarada</h3>
+                <p>Dayactirka Laptops-ka iyo Computer-ada Desktop-ka oo dhan.</p>
+                <button id="bt" onclick="scrollToContact()">nala soo Xiriir</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="contact-section">
+        <div class="contact-box">
+            <h2>Nala Soo Xiriir</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Magacaaga oo buuxa" required>
+                <input type="tel" id="phone" placeholder="Lambarkaaga taleefanka" required>
+                
+                <select id="district" required>
+                    <option value="">Dooro Degmadaada (G. Banaadir)</option>
+                    <option value="Cabdiaziz">Cabdiaziz</option>
+                    <option value="Bondhere">Boondheere</option>
+                    <option value="Daynile">Daynile</option>
+                    <option value="Dharkenley">Dharkeynley</option>
+                    <option value="Hamrawayne">Hamar Weyne</option>
+                    <option value="Hamar Jajab">Hamar Jajab</option>
+                    <option value="Hodan">Hodan</option>
+                    <option value="Howlwadag">Howlwadag</option>
+                    <option value="Huriwa">Huriwa</option>
+                    <option value="Kaxda">Kaxda</option>
+                    <option value="Karan">Karan</option>
+                    <option value="Shibis">Shibis</option>
+                    <option value="Shangani">Shangani</option>
+                    <option value="Waberi">Waberi</option>
+                    <option value="Wadajir">Wadajir</option>
+                    <option value="Warta Nabada">Warta Nabada</option>
+                    <option value="Yaqshid">Yaqshid</option>
+                    <option value="Garasbaley">Garasbaley</option>
+                    <option value="Kahda">Kahda</option>
+                    <option value="Deyniile">Deyniile</option>
+                </select>
+
+                <textarea id="message" placeholder="Maxaan kugu caawinaa?" rows="4"></textarea>
+                
+                <button type="submit" id="sendBtn">Send</button>
+            </form>
+            <div id="responseMsg" class="hidden"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MIDSON. Xuquuqda way dhowran tahay.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

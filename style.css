@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Logo-ga halkan ka hagaajis */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.btn-nav {
+    background: #008080;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('home.jpeg');
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero span { color: #20b2aa; }
+
+.hero-btns a {
+    padding: 12px 30px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary { background: #20b2aa; color: white; }
+.btn-secondary { background: white; color: #333; }
+
+/* FEATURES */
+.features{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:-50px;
+    padding:50px;
+}
+
+.feature-box{
+    background:#0f4c75;
+    color:white;
+    padding:30px;
+    border-radius:10px;
+    width:300px;
+    text-align:center;
+}
+
+/* Services */
+.services { padding: 50px 5%; text-align: center; }
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    
+}
+
+.service-card img { width: 100%; border-radius: 5px; }
+
+#bt {
+    width: 50%;
+    padding: 12px;
+    background:#008080 ;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Contact Form */
+.contact-section { background: #e9ecef; padding: 60px 5%; }
+.contact-box {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#sendBtn {
+    width: 100%;
+    padding: 12px;
+    background: #008080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hidden { display: none; }
+#responseMsg {
+    margin-top: 20px;
+    padding: 15px;
+    background: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.midson-hero-section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px 20px;
+    background-color: #f9fbff; /* Midabka dambe ee khafiifka ah */
+    display: flex;
+    justify-content: center;
+}
+
+.midson-container {
+    max-width: 1000px;
+    background: #ffffff;
+    border: 1px solid #e0e7ff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Habaynta Sawirada */
+.midson-images {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+}
+
+.image-main img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px 50px 10px 50px; /* Geesaha wareegsan sida sawirka */
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: -20px;
+    right: -10px;
+    width: 180px;
+    border: 8px solid #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.image-overlay img {
+    width: 100%;
+    display: block;
+}
+
+/* Habaynta Qoraalka */
+.midson-content {
+    flex: 1.2;
+}
+
+.midson-title {
+    color: #008ba3; /* Midabka Teal-ka ah */
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.midson-description {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.midson-button {
+    display: inline-block;
+    background-color: #008ba3;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.midson-button:hover {
+    background-color: #006d80;
+}
+
+/* Ka dhig mid mobile-ka ku habboon */
+@media (max-width: 768px) {
+    .midson-container {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .midson-images {
+        margin-bottom: 40px;
+    }
+}
+
+
+
+
+
+
+/* Ka dhig mid moobilka ku habboon (Responsive) */
+@media (max-width: 768px) {
+    .welcome-card {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 30px;
+        padding: 20px;
+    }
+
+    .main-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .sub-image img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+
+
+/* Qalabka ka yar 768px (Moobilada iyo qaar ka mid ah Tablets) */
+@media (max-width: 768px) {
+    
+    /* Wax kasta oo Flex ahaa ka dhig hal saf (Column) */
+    .service-container, .hero-content, nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Cabirka qoraalka yaray si uu ugu fadhiyo moobilka */
+    h1 {
+        font-size: 24px !important;
+    }
+
+    /* Card-yada ka dhig 100% balaca ah */
+    .service-card {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    /* Menu-ga kor hadduu ciriiri noqdo */
+    nav ul {
+        display: none; /* Waxaad ku bedeli kartaa 'hamburger menu' hadhow */
+    }
+}
