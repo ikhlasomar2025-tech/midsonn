@@ -310,29 +310,61 @@ input, select, textarea {
 
 
 
+/* --- RESPONSIVE DESIGN --- */
 
-/* Qalabka ka yar 768px (Moobilada iyo qaar ka mid ah Tablets) */
 @media (max-width: 768px) {
-    
-    /* Wax kasta oo Flex ahaa ka dhig hal saf (Column) */
-    .service-container, .hero-content, nav {
+    /* Header-ka iyo Nav-ka */
+    nav {
         flex-direction: column;
-        text-align: center;
+        gap: 15px;
     }
 
-    /* Cabirka qoraalka yaray si uu ugu fadhiyo moobilka */
-    h1 {
-        font-size: 24px !important;
-    }
-
-    /* Card-yada ka dhig 100% balaca ah */
-    .service-card {
-        width: 100% !important;
-        margin-bottom: 20px;
-    }
-
-    /* Menu-ga kor hadduu ciriiri noqdo */
     nav ul {
-        display: none; /* Waxaad ku bedeli kartaa 'hamburger menu' hadhow */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2rem; /* Qoraalka hero-ga oo la yareeyay */
+        padding: 0 10px;
+    }
+
+    /* Features (Sanduuqyada buluugga ah) */
+    .features {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .feature-box {
+        width: 90%; /* Inay shaashada wada qaataan */
+    }
+
+    /* Services (Adeegyada) */
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+
+    /* Contact Form */
+    .contact-box {
+        width: 95%;
+        padding: 20px;
     }
 }
+
+
+
+
