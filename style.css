@@ -291,59 +291,28 @@ input, select, textarea {
 
 /* --- RESPONSIVE DESIGN --- */
 
+/* Mobile Responsive - Horizontal Menu */
 @media (max-width: 768px) {
-    /* Header-ka iyo Nav-ka */
+
     nav {
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-direction: row;   /* jiif jiif */
+        justify-content: center;
+        flex-wrap: wrap;       /* haduu yaraado hoos ha u dagin si qurux badan */
         gap: 10px;
         padding: 0;
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 5px;
     }
 
-    /* Hero Section */
-    .hero h1 {
-        font-size: 2rem; /* Qoraalka hero-ga oo la yareeyay */
-        padding: 0 10px;
-    }
-
-    /* Features (Sanduuqyada buluugga ah) */
-    .features {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-        padding: 20px;
-    }
-
-    .feature-box {
-        width: 90%; /* Inay shaashada wada qaataan */
-    }
-
-    /* Services (Adeegyada) */
-    .service-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card {
-        width: 90%;
-    }
-
-    /* Contact Form */
-    .contact-box {
-        width: 95%;
-        padding: 20px;
+    nav ul li a {
+        font-size: 14px;
     }
 }
-
-
-
-
