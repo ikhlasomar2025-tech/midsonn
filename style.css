@@ -287,27 +287,6 @@ input, select, textarea {
 
 
 
-/* Ka dhig mid moobilka ku habboon (Responsive) */
-@media (max-width: 768px) {
-    .welcome-card {
-        flex-direction: column;
-        text-align: center;
-        border-radius: 30px;
-        padding: 20px;
-    }
-
-    .main-image img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .sub-image img {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-
 
 
 /* --- RESPONSIVE DESIGN --- */
