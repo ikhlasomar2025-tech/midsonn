@@ -1,17 +1,14 @@
-/* 1. Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-:root {
-    --primary-color: #008080;
-    --secondary-color: #0f4c75;
-    --accent-color: #20b2aa;
-    --bg-light: #f4f7f6;
-    --white: #ffffff;
+:root{
+    --primary-color:#008080;
+    --secondary-color:#0f4c75;
+    --bg-light:#f4f7f6;
 }
 
 body {
@@ -21,53 +18,200 @@ body {
     color: #333;
 }
 
-/* 2. Header */
-header {
-    background: var(--white);
-    padding: 15px 0;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* HEADER */
+header{
+    background:#fff;
+    padding:15px 0;
+    box-shadow:0 2px 15px rgba(0,0,0,0.1);
 }
 
-.header-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header-container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.logo img { 
-    height: 50px; 
-    max-width: 100%;
+.logo img{
+    height:50px;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+.btn-nav{
+    background:var(--primary-color);
+    color:white;
+    padding:8px 15px;
+    border-radius:30px;
+}
+
+/* MIDSON SECTION */
+.midson-hero-section{
+    padding:80px 5%;
+}
+
+.midson-container{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    max-width:1100px;
+    margin:auto;
+}
+
+.image-main img{
+    width:100%;
+    border-radius:20px;
+}
+
+.midson-content{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.midson-content:hover{
+    transform:translateY(-8px);
+}
+
+.midson-title{
+    color:var(--secondary-color);
+    margin-bottom:15px;
+}
+
+.midson-description{
+    margin-bottom:20px;
+    line-height:1.7;
+}
+
+.midson-button{
+    padding:10px 25px;
+    background:var(--primary-color);
+    color:white;
+    border-radius:50px;
+    text-decoration:none;
+}
+
+/* CONTACT */
+.contact-section{
+    padding:80px 5%;
+    background:#eef3f7;
+}
+
+.contact-box{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.05);
+}
+
+input,select,textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+#sendBtn{
+    width:100%;
+    padding:15px;
+    background:var(--primary-color);
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#sendBtn:hover{
+    background:var(--secondary-color);
+}
+
+/* RESPONSE MESSAGE */
+#responseMsg{
+    margin-top:15px;
+    padding:15px;
+    background:#e6fffa;
+    border-left:5px solid var(--primary-color);
+    border-radius:10px;
+    font-weight:600;
+    animation:fadeIn 0.4s ease-in-out;
+}
+
+.hidden{
+    display:none;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .midson-container{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+
+
+
+/* 4. Features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
+    max-width: 1100px;
+    margin: -40px auto 50px; /* margin yar ka dhigay */
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #444;
-    font-weight: 600;
-    font-size: 14px;
-    transition: 0.3s;
+.feature-box {
+    background: var(--secondary-color);
+    color: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-nav ul li a:hover { color: var(--primary-color); }
-
-.btn-nav {
-    background: var(--primary-color);
-    color: white !important;
-    padding: 8px 18px;
-    border-radius: 50px;
+.feature-box:hover { 
+    transform: translateY(-10px); 
+    background: var(--primary-color); 
 }
+
+.feature-box .icon { font-size: 40px; margin-bottom: 15px; }
+.feature-box h3 { margin-bottom: 12px; font-size: 1.3rem; }
+
+
+
+
+
+
+
 
 /* 3. HERO SECTION (YAREEYNAY) */
 
@@ -116,199 +260,19 @@ nav ul li a:hover { color: var(--primary-color); }
     box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
 }
 
-/* 4. Features */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: -40px auto 50px; /* margin yar ka dhigay */
-    padding: 0 20px;
-    position: relative;
-    z-index: 10;
+
+
+
+:root {
+    --primary-color: #008080;
+    --secondary-color: #0f4c75;
+    --accent-color: #20b2aa;
+    --bg-light: #f4f7f6;
+    --white: #ffffff;
 }
 
-.feature-box {
-    background: var(--secondary-color);
-    color: white;
-    padding: 35px 25px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.4s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
 
-.feature-box:hover { 
-    transform: translateY(-10px); 
-    background: var(--primary-color); 
-}
 
-.feature-box .icon { font-size: 40px; margin-bottom: 15px; }
-.feature-box h3 { margin-bottom: 12px; font-size: 1.3rem; }
 
-/* 5. About */
-.midson-hero-section { padding: 80px 5%; }
 
-.midson-container {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
 
-.midson-images { position: relative; flex: 1; }
-
-.image-main img { 
-    width: 100%; 
-    border-radius: 20px; 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
-}
-
-.image-overlay {
-    position: absolute;
-    bottom: -30px;
-    right: -20px;
-    width: 220px;
-    border: 10px solid white;
-    border-radius: 20px;
-}
-
-.midson-content { flex: 1.2; }
-
-.midson-title { 
-    color: var(--secondary-color); 
-    font-size: 2.5rem; 
-    margin-bottom: 20px; 
-}
-
-.midson-description { 
-    font-size: 1.1rem; 
-    line-height: 1.8; 
-    color: #666; 
-    margin-bottom: 25px; 
-}
-
-/* 6. Services */
-.services { padding: 80px 5%; background: #fff; }
-
-.section-title { margin-bottom: 50px; text-align: center; }
-
-.underline { 
-    width: 80px; 
-    height: 4px; 
-    background: var(--primary-color); 
-    margin: 10px auto; 
-}
-
-.service-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.service-card {
-    background: var(--bg-light);
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.service-card:hover { 
-    transform: scale(1.03); 
-    background: white; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-}
-
-.card-img img { 
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover; 
-    border-radius: 10px; 
-    margin-bottom: 20px; 
-}
-
-.service-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    border: none;
-    background: var(--primary-color);
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* 7. Contact */
-.contact-section { background: #f0f4f8; padding: 80px 5%; }
-
-.contact-box {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    font-size: 15px;
-}
-
-#sendBtn {
-    width: 100%;
-    padding: 15px;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#sendBtn:hover { background: var(--secondary-color); }
-
-footer { 
-    background: var(--secondary-color); 
-    color: white; 
-    text-align: center; 
-    padding: 30px; 
-}
-
-/* 8. Responsive */
-@media (max-width: 768px) {
-
-    .header-container { flex-direction: column; gap: 15px; }
-
-    nav ul { gap: 10px; }
-
-    nav ul li a { font-size: 12px; }
-
-    .hero { 
-        height: 45vh; /* Mobile ka sii yareeyay */
-        min-height: 300px;
-    }
-
-    .hero h1 { font-size: 2rem; }
-
-    .midson-container { 
-        flex-direction: column; 
-        text-align: center; 
-    }
-
-    .image-overlay { display: none; }
-
-    .features { margin-top: 20px; }
-}
