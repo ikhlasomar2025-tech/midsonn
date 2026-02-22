@@ -320,53 +320,74 @@ input,select,textarea{
 
 
 
-/* 1. MOBILE (0px - 480px) */
-@media screen and (max-width: 480px) {
-    /* .container { width: 100%; padding: 10px; } */
-    .column { width: 100%; display: block; }
-    .text { font-size: 16px; text-align: center; }
+
+
+
+
+
+/* --- RESPONSIVE FIXES (Kaliya Mobile & Tablet) --- */
+
+@media (max-width: 992px) {
+    .midson-container {
+        flex-direction: column; /* Sawirka iyo qoraalka is dul keen */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .midson-content {
+        width: 100%;
+    }
 }
 
-/* 2. LAPTOP / TABLET (481px - 1024px) */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-    /* .container { width: 90%; margin: auto; } */
-    .column { width: 50%; float: left; }
-    .text { font-size: 18px; }
+@media (max-width: 768px) {
+    /* Header-ka si uu ugu haboonaado mobile-ka */
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hero Section - in qoraalku uusan aad u weynaan */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-btns a {
+        display: block; /* Badhamada is dul keen */
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    /* Features - hal saf ka dhig */
+    .features {
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    /* Contact Form - inuusan dhinacyada ka bixin */
+    .contact-box {
+        width: 95%;
+        padding: 20px;
+    }
 }
 
-/* 3. DESKTOP (1025px - Wixii ka sarreeya) */
-@media screen and (min-width: 1025px) {
-    /* .container { max-width: 1200px; margin: 0 auto; } */
-    .column { width: 33.3%; float: left; }
-    .text { font-size: 20px; }
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+
+    nav ul li {
+        font-size: 14px;
+    }
+
+    .midson-content {
+        padding: 20px;
+    }
 }
 
-
-
-.navbar {
-  display: flex;
-  justify-content: space-between; /* Logo gees ayay u galeysaa, menu-kana geeska kale */
-  align-items: center;           /* Si ay hal xariiq ugu wada jiraan */
-  padding: 15px 5%;
-  background-color: #fff;        /* Ama midabka aad rabto */
-}
-
-.nav-links {
-  display: flex;                 /* Menu-ka ayuu jiif ka dhigayaa */
-  list-style: none;
-  gap: 20px;                     /* Masaafada u dhaxeysa link-yada */
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-/* Badanka "Nala Soo Xiriir" ee cagaarka ah */
-.btn-contact {
-  background-color: #008080;
-  color: white !important;
-  padding: 8px 15px;
-  border-radius: 5px;
-}
