@@ -387,3 +387,130 @@ input, select, textarea {
   padding: 8px 15px;
   border-radius: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/*        TABLET (768px)        */
+/* ============================= */
+@media (max-width: 992px) {
+
+    .hero {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .services,
+    .about,
+    .contact {
+        padding: 50px 20px;
+    }
+
+    .services-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+
+/* ============================= */
+/*        MOBILE (768px ↓)      */
+/* ============================= */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 50px 15px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: 100%;
+    }
+
+    /* SERVICES */
+    .services-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-box {
+        padding: 20px;
+    }
+
+    /* ABOUT SECTION */
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .about img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* CONTACT */
+    .contact form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact input,
+    .contact textarea,
+    .contact button {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+}
