@@ -7,7 +7,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
         const responseDiv = document.getElementById('responseMsg');
 
         responseDiv.innerHTML =
-        "Waan ku adeegi doonnaa <b>" + magaca + "</b>, mahadsanid 🤝";
+        "mahadsanid macmiil Waxan kugu adeegi doonnaa sida ugu dhaqsiyaha badan  🤝 ";
 
         responseDiv.classList.remove('hidden');
 
