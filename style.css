@@ -320,7 +320,7 @@ input, select, textarea {
 
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
     nav {
         flex-direction: column;
@@ -357,4 +357,33 @@ input, select, textarea {
     .hero-buttons button {
         width: 100%;
     }
+} */
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo gees ayay u galeysaa, menu-kana geeska kale */
+  align-items: center;           /* Si ay hal xariiq ugu wada jiraan */
+  padding: 15px 5%;
+  background-color: #fff;        /* Ama midabka aad rabto */
+}
+
+.nav-links {
+  display: flex;                 /* Menu-ka ayuu jiif ka dhigayaa */
+  list-style: none;
+  gap: 20px;                     /* Masaafada u dhaxeysa link-yada */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Badanka "Nala Soo Xiriir" ee cagaarka ah */
+.btn-contact {
+  background-color: #008080;
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 5px;
 }
