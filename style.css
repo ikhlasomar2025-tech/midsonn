@@ -340,3 +340,33 @@ input,select,textarea{
     .column { width: 33.3%; float: left; }
     .text { font-size: 20px; }
 }
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo gees ayay u galeysaa, menu-kana geeska kale */
+  align-items: center;           /* Si ay hal xariiq ugu wada jiraan */
+  padding: 15px 5%;
+  background-color: #fff;        /* Ama midabka aad rabto */
+}
+
+.nav-links {
+  display: flex;                 /* Menu-ka ayuu jiif ka dhigayaa */
+  list-style: none;
+  gap: 20px;                     /* Masaafada u dhaxeysa link-yada */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Badanka "Nala Soo Xiriir" ee cagaarka ah */
+.btn-contact {
+  background-color: #008080;
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
