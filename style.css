@@ -325,69 +325,87 @@ input,select,textarea{
 
 
 
-/* --- RESPONSIVE FIXES (Kaliya Mobile & Tablet) --- */
 
-@media (max-width: 992px) {
-    .midson-container {
-        flex-direction: column; /* Sawirka iyo qoraalka is dul keen */
-        text-align: center;
-        gap: 30px;
-    }
 
-    .midson-content {
-        width: 100%;
-    }
-}
+
+
+/* --- RESPONSIVE FIX (MOBILE OPTIMIZATION) --- */
 
 @media (max-width: 768px) {
-    /* Header-ka si uu ugu haboonaado mobile-ka */
+    /* 1. Header-ka inuu hal saf noqdo */
     .header-container {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row; /* Laptop style */
+        justify-content: space-between;
+        padding: 0 10px;
     }
 
     nav ul {
         gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
+        font-size: 11px; /* Yarayn farta menu-ga si ay hal saf ugu wada baxaan */
     }
 
-    /* Hero Section - in qoraalku uusan aad u weynaan */
+    .btn-nav {
+        padding: 5px 10px;
+    }
+
+    /* 2. Hero Section - Qoraalka ka dhig mid weyn balse aan ka baxayn shaashadda */
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem; 
+        line-height: 1.3;
+        padding: 0 10px;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* 3. Badhamada (Hero Buttons) */
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .hero-btns a {
-        display: block; /* Badhamada is dul keen */
-        margin: 10px 0;
-        width: 100%;
+        width: 80%; /* Si ay u ekaadaan badhamada laptop-ka oo kale */
+        margin: 0;
+        padding: 10px;
     }
 
-    /* Features - hal saf ka dhig */
+    /* 4. Features (Sanduuqyada buluugga ah) */
     .features {
-        margin-top: 20px;
-        grid-template-columns: 1fr;
-        padding: 0 20px;
+        margin-top: -20px; /* Si ay kor ugu soo dhawaadaan */
+        grid-template-columns: 1fr; /* Hal saf ka dhig mobile-ka si ay u aqriyaan */
+        gap: 15px;
     }
 
-    /* Contact Form - inuusan dhinacyada ka bixin */
-    .contact-box {
-        width: 95%;
+    .feature-box {
         padding: 20px;
     }
-}
 
-@media (max-width: 480px) {
-    .logo img {
-        height: 40px;
-    }
-
-    nav ul li {
-        font-size: 14px;
+    /* 5. Midson/About Section */
+    .midson-container {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .midson-content {
         padding: 20px;
+        width: 100%;
     }
 }
 
+/* 6. Haddii shaashadu aad u yar tahay (Small Phones) */
+@media (max-width: 480px) {
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Menu-ga labo saf ka dhig */
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+}
