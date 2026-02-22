@@ -273,6 +273,31 @@ input,select,textarea{
 
 
 
+/* 8. Responsive */
+@media (max-width: 768px) {
+
+    .header-container { flex-direction: column; gap: 15px; }
+
+    nav ul { gap: 10px; }
+
+    nav ul li a { font-size: 12px; }
+
+    .hero { 
+        height: 45vh; /* Mobile ka sii yareeyay */
+        min-height: 300px;
+    }
+
+    .hero h1 { font-size: 2rem; }
+
+    .midson-container { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .image-overlay { display: none; }
+
+    .features { margin-top: 20px; }
+}
 
 
 
