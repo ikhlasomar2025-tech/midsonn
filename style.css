@@ -273,53 +273,6 @@ input,select,textarea{
 
 
 
-/* --- RESPONSIVE DESIGN (Media Queries) --- */
-
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-    }
-
-    nav ul {
-        margin-top: 15px;
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .midson-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .image-main img {
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    .hero-btns a {
-        width: 100%;
-        margin: 5px 0;
-    }
-}
-
-
-
 
 
 
