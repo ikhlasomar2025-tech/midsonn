@@ -21,7 +21,7 @@ body {
     color: #333;
 }
 
-/* 2. Header & Navigation */
+/* 2. Header */
 header {
     background: var(--white);
     padding: 15px 0;
@@ -40,7 +40,10 @@ header {
     align-items: center;
 }
 
-.logo img { height: 50px; }
+.logo img { 
+    height: 50px; 
+    max-width: 100%;
+}
 
 nav ul {
     display: flex;
@@ -66,22 +69,34 @@ nav ul li a:hover { color: var(--primary-color); }
     border-radius: 50px;
 }
 
-/* 3. Hero Section */
+/* 3. HERO SECTION (YAREEYNAY) */
+
 .hero {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('home.jpeg');
     background-size: cover;
     background-position: center;
-    height: 85vh;
+    height: 55vh; /* Halkan ka yareeyay */
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    padding: 20px;
 }
 
-.hero h1 { font-size: 3.5rem; margin-bottom: 15px; max-width: 800px; }
+.hero h1 { 
+    font-size: 3rem; 
+    margin-bottom: 15px; 
+    max-width: 800px; 
+}
+
 .hero span { color: var(--accent-color); }
-.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+
+.hero p { 
+    font-size: 1.1rem; 
+    margin-bottom: 30px; 
+}
 
 .hero-btns a {
     padding: 14px 35px;
@@ -95,15 +110,19 @@ nav ul li a:hover { color: var(--primary-color); }
 
 .btn-primary { background: var(--accent-color); color: white; }
 .btn-secondary { background: white; color: #333; }
-.hero-btns a:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 
-/* 4. Features Section (SAXIDDAAD CODSATAY) */
+.hero-btns a:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+}
+
+/* 4. Features */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     max-width: 1100px;
-    margin: -60px auto 50px;
+    margin: -40px auto 50px; /* margin yar ka dhigay */
     padding: 0 20px;
     position: relative;
     z-index: 10;
@@ -122,12 +141,17 @@ nav ul li a:hover { color: var(--primary-color); }
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.feature-box:hover { transform: translateY(-10px); background: var(--primary-color); }
+.feature-box:hover { 
+    transform: translateY(-10px); 
+    background: var(--primary-color); 
+}
+
 .feature-box .icon { font-size: 40px; margin-bottom: 15px; }
 .feature-box h3 { margin-bottom: 12px; font-size: 1.3rem; }
 
-/* 5. Midson Section (About) */
+/* 5. About */
 .midson-hero-section { padding: 80px 5%; }
+
 .midson-container {
     max-width: 1100px;
     margin: auto;
@@ -137,7 +161,13 @@ nav ul li a:hover { color: var(--primary-color); }
 }
 
 .midson-images { position: relative; flex: 1; }
-.image-main img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+.image-main img { 
+    width: 100%; 
+    border-radius: 20px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+}
+
 .image-overlay {
     position: absolute;
     bottom: -30px;
@@ -148,13 +178,31 @@ nav ul li a:hover { color: var(--primary-color); }
 }
 
 .midson-content { flex: 1.2; }
-.midson-title { color: var(--secondary-color); font-size: 2.5rem; margin-bottom: 20px; }
-.midson-description { font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 25px; }
+
+.midson-title { 
+    color: var(--secondary-color); 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+}
+
+.midson-description { 
+    font-size: 1.1rem; 
+    line-height: 1.8; 
+    color: #666; 
+    margin-bottom: 25px; 
+}
 
 /* 6. Services */
 .services { padding: 80px 5%; background: #fff; }
+
 .section-title { margin-bottom: 50px; text-align: center; }
-.underline { width: 80px; height: 4px; background: var(--primary-color); margin: 10px auto; }
+
+.underline { 
+    width: 80px; 
+    height: 4px; 
+    background: var(--primary-color); 
+    margin: 10px auto; 
+}
 
 .service-container {
     display: grid;
@@ -172,8 +220,20 @@ nav ul li a:hover { color: var(--primary-color); }
     transition: 0.3s;
 }
 
-.service-card:hover { transform: scale(1.03); background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-.card-img img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+.service-card:hover { 
+    transform: scale(1.03); 
+    background: white; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+}
+
+.card-img img { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+}
+
 .service-btn {
     margin-top: 15px;
     padding: 10px 20px;
@@ -184,8 +244,9 @@ nav ul li a:hover { color: var(--primary-color); }
     cursor: pointer;
 }
 
-/* 7. Contact Section */
+/* 7. Contact */
 .contact-section { background: #f0f4f8; padding: 80px 5%; }
+
 .contact-box {
     max-width: 600px;
     margin: 0 auto;
@@ -194,9 +255,6 @@ nav ul li a:hover { color: var(--primary-color); }
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.05);
 }
-
-.contact-box h2 { text-align: center; margin-bottom: 10px; }
-.contact-box p { text-align: center; margin-bottom: 30px; color: #777; }
 
 input, select, textarea {
     width: 100%;
@@ -222,15 +280,35 @@ input, select, textarea {
 
 #sendBtn:hover { background: var(--secondary-color); }
 
-footer { background: var(--secondary-color); color: white; text-align: center; padding: 30px; }
+footer { 
+    background: var(--secondary-color); 
+    color: white; 
+    text-align: center; 
+    padding: 30px; 
+}
 
-/* 8. RESPONSIVE DESIGN */
+/* 8. Responsive */
 @media (max-width: 768px) {
+
     .header-container { flex-direction: column; gap: 15px; }
+
     nav ul { gap: 10px; }
+
     nav ul li a { font-size: 12px; }
+
+    .hero { 
+        height: 45vh; /* Mobile ka sii yareeyay */
+        min-height: 300px;
+    }
+
     .hero h1 { font-size: 2rem; }
-    .midson-container { flex-direction: column; text-align: center; }
-    .image-overlay { display: none; } /* Mobile-ka ka qafiifi */
+
+    .midson-container { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .image-overlay { display: none; }
+
     .features { margin-top: 20px; }
 }
