@@ -1,17 +1,14 @@
-/* 1. Global Styles & Variables */
-:root {
-    --primary-color: #008080;
-    --secondary-color: #0f4c75;
-    --accent-color: #20b2aa;
-    --bg-light: #f4f7f6;
-    --white: #ffffff;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+:root{
+    --primary-color:#008080;
+    --secondary-color:#0f4c75;
+    --bg-light:#f4f7f6;
 }
 
 body {
@@ -21,61 +18,208 @@ body {
     color: #333;
 }
 
-/* 2. HEADER - Kan ayaa saxaya Header-kaaga */
-header {
-    background: #fff;
-    padding: 10px 0;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* HEADER */
+header{
+    background:#fff;
+    padding:15px 0;
+    box-shadow:0 2px 15px rgba(0,0,0,0.1);
 }
 
-.header-container {
-    width: 90%;
-    margin: auto;
+.header-container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img{
+    height:50px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+.btn-nav{
+    background:var(--primary-color);
+    color:white;
+    padding:8px 15px;
+    border-radius:30px;
+}
+
+/* MIDSON SECTION */
+.midson-hero-section{
+    padding:80px 5%;
+}
+
+.midson-container{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    max-width:1100px;
+    margin:auto;
+}
+
+.image-main img{
+    width:100%;
+    border-radius:20px;
+}
+
+.midson-content{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.midson-content:hover{
+    transform:translateY(-8px);
+}
+
+.midson-title{
+    color:var(--secondary-color);
+    margin-bottom:15px;
+}
+
+.midson-description{
+    margin-bottom:20px;
+    line-height:1.7;
+}
+
+.midson-button{
+    padding:10px 25px;
+    background:var(--primary-color);
+    color:white;
+    border-radius:50px;
+    text-decoration:none;
+}
+
+/* CONTACT */
+.contact-section{
+    padding:80px 5%;
+    background:#eef3f7;
+}
+
+.contact-box{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.05);
+}
+
+input,select,textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+#sendBtn{
+    width:100%;
+    padding:15px;
+    background:var(--primary-color);
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#sendBtn:hover{
+    background:var(--secondary-color);
+}
+
+/* RESPONSE MESSAGE */
+#responseMsg{
+    margin-top:15px;
+    padding:15px;
+    background:#e6fffa;
+    border-left:5px solid var(--primary-color);
+    border-radius:10px;
+    font-weight:600;
+    animation:fadeIn 0.4s ease-in-out;
+}
+
+.hidden{
+    display:none;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .midson-container{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+
+
+
+/* 4. Features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: -40px auto 50px; /* margin yar ka dhigay */
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.feature-box {
+    background: var(--secondary-color);
+    color: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s;
     display: flex;
-    justify-content: space-between; /* Logo bidix, Menu midig */
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.logo img {
-    height: 50px;
-    display: block;
+.feature-box:hover { 
+    transform: translateY(-10px); 
+    background: var(--primary-color); 
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    align-items: center;
-}
+.feature-box .icon { font-size: 40px; margin-bottom: 15px; }
+.feature-box h3 { margin-bottom: 12px; font-size: 1.3rem; }
 
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 15px;
-    transition: 0.3s;
-}
 
-nav a:hover {
-    color: var(--primary-color);
-}
 
-.btn-nav {
-    background: var(--primary-color);
-    color: white !important;
-    padding: 8px 18px;
-    border-radius: 30px;
-}
 
-/* 3. HERO SECTION */
+
+
+
+
+/* 3. HERO SECTION (YAREEYNAY) */
+
 .hero {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('home.jpeg');
     background-size: cover;
     background-position: center;
-    height: 55vh;
+    height: 55vh; /* Halkan ka yareeyay */
     min-height: 400px;
     display: flex;
     align-items: center;
@@ -93,8 +237,13 @@ nav a:hover {
 
 .hero span { color: var(--accent-color); }
 
+.hero p { 
+    font-size: 1.1rem; 
+    margin-bottom: 30px; 
+}
+
 .hero-btns a {
-    padding: 12px 30px;
+    padding: 14px 35px;
     margin: 10px;
     display: inline-block;
     border-radius: 50px;
@@ -106,143 +255,27 @@ nav a:hover {
 .btn-primary { background: var(--accent-color); color: white; }
 .btn-secondary { background: white; color: #333; }
 
-/* 4. FEATURES */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: -40px auto 50px;
-    padding: 0 20px;
-    position: relative;
-    z-index: 10;
+.hero-btns a:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
 }
 
-.feature-box {
-    background: var(--secondary-color);
-    color: white;
-    padding: 35px 25px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.4s;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+
+
+:root {
+    --primary-color: #008080;
+    --secondary-color: #0f4c75;
+    --accent-color: #20b2aa;
+    --bg-light: #f4f7f6;
+    --white: #ffffff;
 }
 
-.feature-box:hover { 
-    transform: translateY(-10px); 
-    background: var(--primary-color); 
-}
 
-/* 5. MIDSON SECTION */
-.midson-hero-section {
-    padding: 60px 5%;
-}
 
-.midson-container {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    max-width: 1100px;
-    margin: auto;
-}
 
-.image-main { flex: 1; }
-.image-main img {
-    width: 100%;
-    border-radius: 20px;
-}
 
-.midson-content {
-    flex: 1;
-    background: white;
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
 
-/* 6. CONTACT SECTION */
-.contact-section {
-    padding: 80px 5%;
-    background: #eef3f7;
-}
 
-.contact-box {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-}
 
-input, select, textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
 
-#sendBtn {
-    width: 100%;
-    padding: 15px;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* 7. RESPONSIVE DESIGN (SIXIDDA MOBILE-KA) */
-@media (max-width: 768px) {
-    /* Header-ka oo jiif ah mobile-ka */
-    .header-container {
-        width: 95%;
-    }
-
-    .logo img {
-        height: 35px; /* Logo yaray mobile-ka */
-    }
-
-    nav ul {
-        gap: 10px; /* Isku soo dhowee link-yada */
-    }
-
-    nav a {
-        font-size: 12px; /* Qoraalka yaree si uu hal xariiq ugu soo baxo */
-    }
-
-    .btn-nav {
-        padding: 6px 12px;
-    }
-
-    /* Qaybaha kale */
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .midson-container {
-        flex-direction: column; /* Sawirka iyo qoraalka is dul fariisi */
-        text-align: center;
-        gap: 30px;
-    }
-
-    .features {
-        margin-top: 20px; /* Margin-ka sare yaree mobile-ka */
-    }
-
-    .midson-content {
-        padding: 25px;
-    }
-}
-
-/* Qayb aad u yar (Mobile-yada yaryar) */
-@media (max-width: 480px) {
-    nav a {
-        font-size: 10px;
-    }
-    
-    .logo img {
-        height: 30px;
-    }
-}
