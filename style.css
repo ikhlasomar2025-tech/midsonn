@@ -280,8 +280,6 @@ input,select,textarea{
 
 
 
-
-
 /* --- RESPONSIVE FIX (MOBILE OPTIMIZATION) --- */
 
 @media (max-width: 768px) {
@@ -349,16 +347,3 @@ input,select,textarea{
     }
 }
 
-/* 6. Haddii shaashadu aad u yar tahay (Small Phones) */
-@media (max-width: 480px) {
-    nav ul {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Menu-ga labo saf ka dhig */
-        text-align: center;
-        gap: 5px;
-    }
-    
-    .logo img {
-        height: 35px;
-    }
-}
