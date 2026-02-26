@@ -162,52 +162,6 @@ input,select,textarea{
     to{opacity:1;transform:translateY(0);}
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-    .midson-container{
-        flex-direction:column;
-        text-align:center;
-    }
-}
-
-
-
-
-/* 4. Features */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: -40px auto 50px; /* margin yar ka dhigay */
-    padding: 0 20px;
-    position: relative;
-    z-index: 10;
-}
-
-.feature-box {
-    background: var(--secondary-color);
-    color: white;
-    padding: 35px 25px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.4s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.feature-box:hover { 
-    transform: translateY(-10px); 
-    background: var(--primary-color); 
-}
-
-.feature-box .icon { font-size: 40px; margin-bottom: 15px; }
-.feature-box h3 { margin-bottom: 12px; font-size: 1.3rem; }
-
-
-
 
 
 
@@ -275,7 +229,18 @@ input,select,textarea{
 
 
 
+@media (max-width: 768px){
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .container {
+        flex-direction: column;
+    }
 
-
-
+    .box {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
